@@ -1,0 +1,35 @@
+.dashboard-tile {
+  height: 100%; /* Ensure the tile takes up the full height of the column */
+  width: 100%; /* Ensure the width is 100% of the available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f8f9fa; /* Light background color for the tiles */
+  border-radius: px; /* Slight rounding of corners */
+  transition: all 0.3s ease-in-out; /* Transition for smooth hover effect */
+  box-sizing: border-box; /* Ensure padding doesn't affect the overall size */
+}
+
+.dashboard-tile:hover {
+  transform: scale(1.05); /* Enlarge the tile */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1.15rem;
+}
+
+@media (max-width: 576px) {
+  .dashboard-tile {
+    height: 300px; /* Slightly smaller height for smaller screens */
+  }
+}
+
+
