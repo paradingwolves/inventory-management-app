@@ -4,11 +4,12 @@ import Footer from '../Layout/Footer/Footer';
 import useGetInventory from '../../hooks/inventory/useGetInventory';
 import { useParams } from 'react-router-dom';
 import ViewInventoryFilter from './ViewInventoryFilter';
+import useAuth from '../../hooks/auth/auth';
 
 const ViewInventory = () => {
   const { store_id } = useParams();
   const { inventory, loading, error } = useGetInventory(store_id);
-
+  const { storeName } = useAuth();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [sortBy, setSortBy] = useState('date_modified');
@@ -49,7 +50,7 @@ const ViewInventory = () => {
     <div>
       <Header />
       <div className="container my-5">
-        <h2 className="mb-4">Inventory for Store: {store_id}</h2>
+        <h2 className="mb-4">Inventory for Store: {storeName}</h2>
 
         <ViewInventoryFilter
           searchTerm={searchTerm}
