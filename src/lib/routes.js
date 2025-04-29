@@ -36,10 +36,7 @@ export const router = createBrowserRouter([
       element: <Home />,
       children: [
        
-        {
-          path: CONTACT,
-          element: <Contact />
-        },
+        
       ]
     },
     { 
@@ -59,6 +56,7 @@ export const router = createBrowserRouter([
     { path: ADMIN, element: <AdminIndex /> },
     { path: RECEIVING, element: <ReceiveInventory /> },
     { path: VIEW_INVENTORY, element: <ViewInventory /> },
+    { path: CONTACT, element: <Contact /> },
     { path: "*", element: <Error404 /> }
   ]);
 
