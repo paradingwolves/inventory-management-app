@@ -35,7 +35,7 @@ const ReceiveInventory = ({ storeId, username }) => {
   return (
     <div>
       <Header />
-      <div className="container mt-5">
+      <div className="container my-5">
         <h1 className="mb-4">Receive Inventory</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -51,7 +51,7 @@ const ReceiveInventory = ({ storeId, username }) => {
               disabled={loading}
             />
           </div>
-          <button type="submit" className="btn btn-primary" disabled={loading}>
+          <button type="submit" className="btn btn-primary mb-5" disabled={loading}>
             {loading ? 'Processing...' : 'Submit'}
           </button>
         </form>
