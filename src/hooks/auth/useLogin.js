@@ -25,6 +25,7 @@ const useLogin = () => {
       // 2. Save store_id to localStorage for later use
       localStorage.removeItem('store_id');
       localStorage.setItem('store_id', store_id);
+      localStorage.setItem('user_id', uid);
 
       // 3. Fetch user document from Firestore (this part will be handled by useAuth)
       const userDocRef = doc(db, 'stores', store_id, 'users', uid);
