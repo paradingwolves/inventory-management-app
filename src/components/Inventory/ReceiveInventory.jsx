@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import useReceiveInventoryItem from '../../hooks/inventory/useAddInventory';
 import Header from '../Layout/Header/Header';
 import Footer from '../Layout/Footer/Footer';
@@ -32,10 +32,24 @@ const ReceiveInventory = ({ storeId, username }) => {
     setBarcode('');
   };
 
+  // Autosubmit when barcode is entered (enter key press)
+  const handleBarcodeChange = (e) => {
+    const newBarcode = e.target.value;
+    setBarcode(newBarcode);
+
+    // Check if the barcode is valid (you can add your own validation logic)
+    if (newBarcode && !loading) {
+      // Check for Enter key to trigger autosubmit
+      if (e.key === 'Enter') {
+        handleSubmit(e);
+      }
+    }
+  };
+
   return (
     <div>
       <Header />
-      <div className="container my-5">
+      <div className="container mt-3 mb-5">
         <h1 className="mb-4">Receive Inventory</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -46,7 +60,8 @@ const ReceiveInventory = ({ storeId, username }) => {
               id="barcode"
               placeholder="Scan with Zebra scanner..."
               value={barcode}
-              onChange={(e) => setBarcode(e.target.value)}
+              onChange={handleBarcodeChange}
+              onKeyDown={handleBarcodeChange} // Listen for the Enter key press
               autoFocus
               disabled={loading}
             />

@@ -1,0 +1,80 @@
+/* Navbar and Header Styles */
+.navbar-brand {
+  font-size: 1.5rem; /* Make brand name more prominent */
+}
+
+.navbar-toggler {
+  padding: 5px 10px; /* Adjust button size */
+}
+
+/* Mobile Navbar */
+@media (max-width: 991px) {
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px; /* Increased width for better usability */
+    height: 100vh;
+    background-color: #343a40;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    padding: 25px; /* More space inside the navbar */
+    z-index: 1050;
+  }
+
+  .mobile-nav.show {
+    right: 0; /* Slide-in effect */
+  }
+
+  .mobile-nav ul {
+    padding-left: 0; /* Remove default list padding */
+  }
+
+  .mobile-nav ul li {
+    padding: 10px 0; /* Add spacing between items */
+    font-size: 1.1rem; /* Slightly larger text */
+  }
+
+  .mobile-nav button {
+    margin-top: 10px; /* Space for logout button */
+  }
+
+  /* Overlay for backdrop effect */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1049;
+  }
+
+  .overlay.show {
+    opacity: 1;
+  }
+
+  /* Header Fade-out Effect */
+  .header {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .header-hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction when faded */
+  }
+
+  /* Toggle Button Visibility */
+  .navbar-toggler {
+    display: block; /* Ensure visibility on mobile */
+    z-index: 1051; /* Keep it above the navbar */
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none; /* Hide on larger screens */
+  }
+}

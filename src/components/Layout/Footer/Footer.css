@@ -1,34 +1,51 @@
 .footer {
-    background-color: #f5f5f5;
-    padding: 1rem 2rem;
-    text-align: center;
-    font-size: 0.875rem;
-    color: #555;
-    border-top: 1px solid #ddd;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 10;
-  }
-  
+  background-color: #f5f5f5;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile styles */
+@media (max-width: 576px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center; /* Center everything vertically */
+    align-items: center; /* Center items horizontally */
   }
-  
+
   .footer-links {
-    display: flex;
-    gap: 1rem;
+    justify-content: center; /* Center links horizontally */
+    gap: 1.5rem; /* Increase gap to make it more readable */
   }
-  
+
   .footer-links a {
-    color: #555;
-    text-decoration: none;
+    font-size: 0.9rem; /* Make the font a bit larger on mobile */
   }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
+}
