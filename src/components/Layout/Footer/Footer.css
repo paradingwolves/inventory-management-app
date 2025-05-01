@@ -1,3 +1,4 @@
+/* Footer Styles */
 .footer {
   background-color: #f5f5f5;
   padding: 1rem 2rem;
@@ -34,6 +35,10 @@
 
 /* Mobile styles */
 @media (max-width: 576px) {
+  .footer {
+    padding: 1rem 1rem; /* Reduced padding for smaller screens */
+  }
+
   .footer-content {
     flex-direction: column;
     justify-content: center; /* Center everything vertically */
@@ -42,10 +47,34 @@
 
   .footer-links {
     justify-content: center; /* Center links horizontally */
-    gap: 1.5rem; /* Increase gap to make it more readable */
+    gap: 1.5rem; /* Increase gap for readability */
   }
 
   .footer-links a {
-    font-size: 0.9rem; /* Make the font a bit larger on mobile */
+    font-size: 1rem; /* Slightly larger font for better readability */
+  }
+
+  .footer {
+    font-size: 0.9rem; /* Increase font size on mobile */
+  }
+}
+
+/* Further adjustments for very small screens (Less than 480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.8rem; /* Reduce padding even more on very small screens */
+    font-size: 0.85rem; /* Slightly smaller font size for ultra-compact views */
+  }
+
+  .footer-content {
+    padding: 0 0.5rem; /* Tighter padding for the content */
+  }
+
+  .footer-links {
+    gap: 1rem; /* Adjust link spacing for tighter layout */
+  }
+
+  .footer-links a {
+    font-size: 0.95rem; /* Slightly smaller font size to fit in smaller space */
   }
 }
