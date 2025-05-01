@@ -5,20 +5,23 @@
 
 .navbar-toggler {
   padding: 5px 10px; /* Adjust button size */
+  border: none; /* Remove border */
+  background-color: transparent; /* Make the button background transparent */
 }
 
 /* Mobile Navbar */
 @media (max-width: 991px) {
+  /* Mobile Navbar (For screens smaller than 991px) */
   .mobile-nav {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 300px; /* Increased width for better usability */
+    width: 280px; /* Reduced width for better fit on smaller screens */
     height: 100vh;
     background-color: #343a40;
     transition: right 0.3s ease-in-out;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
-    padding: 25px; /* More space inside the navbar */
+    padding: 20px; /* Less padding for compact view */
     z-index: 1050;
   }
 
@@ -31,12 +34,12 @@
   }
 
   .mobile-nav ul li {
-    padding: 10px 0; /* Add spacing between items */
-    font-size: 1.1rem; /* Slightly larger text */
+    padding: 8px 0; /* Add spacing between items */
+    font-size: 1rem; /* Smaller text for better readability on small screens */
   }
 
   .mobile-nav button {
-    margin-top: 10px; /* Space for logout button */
+    margin-top: 15px; /* Space for logout button */
   }
 
   /* Overlay for backdrop effect */
@@ -73,6 +76,32 @@
   }
 }
 
+/* Further adjustments for smaller screens (Less than 480px) */
+@media (max-width: 480px) {
+  /* Adjust Navbar Brand */
+  .navbar-brand {
+    font-size: 1.25rem; /* Slightly smaller font size */
+  }
+
+  /* Mobile Navbar */
+  .mobile-nav {
+    width: 240px; /* Even smaller width for very small screens */
+    padding: 15px; /* Further reduced padding */
+  }
+
+  /* Navbar Items */
+  .mobile-nav ul li {
+    font-size: 0.9rem; /* Smaller text */
+    padding: 6px 0; /* Even tighter spacing */
+  }
+
+  /* Toggler Button */
+  .navbar-toggler {
+    padding: 4px 8px; /* Further reduce size of toggler button */
+  }
+}
+
+/* Hide navbar-toggler on larger screens */
 @media (min-width: 992px) {
   .navbar-toggler {
     display: none; /* Hide on larger screens */
