@@ -72,13 +72,13 @@ const ReceiveInventory = ({ storeId, username }) => {
         </form>
 
         {message && (
-          <div className="alert alert-success mt-4" role="alert">
+          <div className="alert alert-success my-4" role="alert">
             {message}
           </div>
         )}
 
         {error && (
-          <div className="alert alert-danger mt-4" role="alert">
+          <div className="alert alert-danger my-4" role="alert">
             {error}
           </div>
         )}
