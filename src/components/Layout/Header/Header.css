@@ -1,12 +1,19 @@
 /* Navbar and Header Styles */
+.navbar {
+  padding: 0.5rem 1rem; /* Adjust padding for a compact look */
+}
+
 .navbar-brand {
-  font-size: 1.25rem; /* Reduce size for compact screens */
+  font-size: 1.25rem; /* Slightly smaller brand name */
+  flex-grow: 1; /* Allow brand to take as much space as it needs */
 }
 
 .navbar-toggler {
-  padding: 4px 8px; /* Reduce button size */
-  border: none; /* No border */
-  background-color: transparent; /* Transparent background */
+  padding: 5px 10px; /* Adjust button size */
+  border: none;
+  background-color: transparent;
+  position: absolute; /* Position hamburger button outside of flow */
+  right: 10px; /* Position it to the far right */
 }
 
 /* Mobile Navbar */
@@ -15,12 +22,12 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 240px; /* Even narrower width for small screen */
+    width: 240px;
     height: 100vh;
     background-color: #343a40;
     transition: right 0.3s ease-in-out;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5); /* Lighter shadow */
-    padding: 15px; /* Tighter padding for smaller view */
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+    padding: 15px;
     z-index: 1050;
   }
 
@@ -33,12 +40,12 @@
   }
 
   .mobile-nav ul li {
-    padding: 6px 0; /* Reduced item padding */
-    font-size: 0.9rem; /* Smaller font size */
+    padding: 6px 0;
+    font-size: 0.9rem;
   }
 
   .mobile-nav button {
-    margin-top: 12px; /* Adequate spacing for buttons */
+    margin-top: 12px;
   }
 
   /* Overlay for backdrop effect */
@@ -58,16 +65,6 @@
     opacity: 1;
   }
 
-  /* Header Fade-out Effect */
-  .header {
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .header-hidden {
-    opacity: 0;
-    pointer-events: none; /* Prevent interaction when faded */
-  }
-
   /* Toggle Button Visibility */
   .navbar-toggler {
     display: block;
@@ -78,19 +75,19 @@
 /* Further adjustments for very small screens (Less than 480px) */
 @media (max-width: 480px) {
   .navbar-brand {
-    font-size: 1.125rem; /* Smaller brand font */
+    font-size: 1.125rem;
   }
 
   .navbar-toggler {
-    padding: 3px 6px; /* Further reduce toggler size */
+    padding: 3px 6px;
   }
 
   .mobile-nav {
-    width: 220px; /* More compact width */
-    padding: 10px; /* Even tighter padding */
+    width: 220px;
+    padding: 10px;
   }
 
   .mobile-nav ul li {
-    font-size: 0.85rem; /* Smaller font for ultra-small screens */
+    font-size: 0.85rem;
   }
 }
