@@ -66,19 +66,19 @@ const ReceiveInventory = ({ storeId, username }) => {
               disabled={loading}
             />
           </div>
-          <button type="submit" className="btn btn-primary mb-5" disabled={loading}>
+          <button type="submit" className="btn btn-primary mb-1" disabled={loading}>
             {loading ? 'Processing...' : 'Submit'}
           </button>
         </form>
 
         {message && (
-          <div className="alert alert-success my-4" role="alert">
+          <div className="alert alert-success mb-4" role="alert">
             {message}
           </div>
         )}
 
         {error && (
-          <div className="alert alert-danger my-4" role="alert">
+          <div className="alert alert-danger mb-4" role="alert">
             {error}
           </div>
         )}
