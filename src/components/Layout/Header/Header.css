@@ -1,27 +1,26 @@
 /* Navbar and Header Styles */
 .navbar-brand {
-  font-size: 1.5rem; /* Make brand name more prominent */
+  font-size: 1.25rem; /* Reduce size for compact screens */
 }
 
 .navbar-toggler {
-  padding: 5px 10px; /* Adjust button size */
-  border: none; /* Remove border */
-  background-color: transparent; /* Make the button background transparent */
+  padding: 4px 8px; /* Reduce button size */
+  border: none; /* No border */
+  background-color: transparent; /* Transparent background */
 }
 
 /* Mobile Navbar */
-@media (max-width: 991px) {
-  /* Mobile Navbar (For screens smaller than 991px) */
+@media (max-width: 576px) {
   .mobile-nav {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px; /* Reduced width for better fit on smaller screens */
+    width: 240px; /* Even narrower width for small screen */
     height: 100vh;
     background-color: #343a40;
     transition: right 0.3s ease-in-out;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
-    padding: 20px; /* Less padding for compact view */
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5); /* Lighter shadow */
+    padding: 15px; /* Tighter padding for smaller view */
     z-index: 1050;
   }
 
@@ -30,16 +29,16 @@
   }
 
   .mobile-nav ul {
-    padding-left: 0; /* Remove default list padding */
+    padding-left: 0;
   }
 
   .mobile-nav ul li {
-    padding: 8px 0; /* Add spacing between items */
-    font-size: 1rem; /* Smaller text for better readability on small screens */
+    padding: 6px 0; /* Reduced item padding */
+    font-size: 0.9rem; /* Smaller font size */
   }
 
   .mobile-nav button {
-    margin-top: 15px; /* Space for logout button */
+    margin-top: 12px; /* Adequate spacing for buttons */
   }
 
   /* Overlay for backdrop effect */
@@ -71,39 +70,27 @@
 
   /* Toggle Button Visibility */
   .navbar-toggler {
-    display: block; /* Ensure visibility on mobile */
-    z-index: 1051; /* Keep it above the navbar */
+    display: block;
+    z-index: 1051;
   }
 }
 
-/* Further adjustments for smaller screens (Less than 480px) */
+/* Further adjustments for very small screens (Less than 480px) */
 @media (max-width: 480px) {
-  /* Adjust Navbar Brand */
   .navbar-brand {
-    font-size: 1.25rem; /* Slightly smaller font size */
+    font-size: 1.125rem; /* Smaller brand font */
   }
 
-  /* Mobile Navbar */
+  .navbar-toggler {
+    padding: 3px 6px; /* Further reduce toggler size */
+  }
+
   .mobile-nav {
-    width: 240px; /* Even smaller width for very small screens */
-    padding: 15px; /* Further reduced padding */
+    width: 220px; /* More compact width */
+    padding: 10px; /* Even tighter padding */
   }
 
-  /* Navbar Items */
   .mobile-nav ul li {
-    font-size: 0.9rem; /* Smaller text */
-    padding: 6px 0; /* Even tighter spacing */
-  }
-
-  /* Toggler Button */
-  .navbar-toggler {
-    padding: 4px 8px; /* Further reduce size of toggler button */
-  }
-}
-
-/* Hide navbar-toggler on larger screens */
-@media (min-width: 992px) {
-  .navbar-toggler {
-    display: none; /* Hide on larger screens */
+    font-size: 0.85rem; /* Smaller font for ultra-small screens */
   }
 }

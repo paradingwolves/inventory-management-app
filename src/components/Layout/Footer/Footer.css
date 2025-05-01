@@ -1,9 +1,9 @@
 /* Footer Styles */
 .footer {
   background-color: #f5f5f5;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1rem; /* Tighter padding for compact view */
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.75rem; /* Reduce font size */
   color: #555;
   border-top: 1px solid #ddd;
   position: fixed;
@@ -21,7 +21,7 @@
 
 .footer-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem; /* Smaller gap between links */
 }
 
 .footer-links a {
@@ -36,45 +36,42 @@
 /* Mobile styles */
 @media (max-width: 576px) {
   .footer {
-    padding: 1rem 1rem; /* Reduced padding for smaller screens */
+    padding: 0.8rem 1rem; /* Reduced padding */
+    font-size: 0.75rem; /* Smaller font for compact view */
   }
 
   .footer-content {
     flex-direction: column;
-    justify-content: center; /* Center everything vertically */
-    align-items: center; /* Center items horizontally */
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-links {
-    justify-content: center; /* Center links horizontally */
-    gap: 1.5rem; /* Increase gap for readability */
+    justify-content: center;
+    gap: 1rem; /* Slightly more spacing between links */
   }
 
   .footer-links a {
-    font-size: 1rem; /* Slightly larger font for better readability */
-  }
-
-  .footer {
-    font-size: 0.9rem; /* Increase font size on mobile */
+    font-size: 0.9rem; /* Slightly larger font on mobile */
   }
 }
 
 /* Further adjustments for very small screens (Less than 480px) */
 @media (max-width: 480px) {
   .footer {
-    padding: 0.8rem; /* Reduce padding even more on very small screens */
-    font-size: 0.85rem; /* Slightly smaller font size for ultra-compact views */
+    padding: 0.6rem 0.8rem; /* Even tighter padding */
+    font-size: 0.7rem; /* Smaller font size */
   }
 
   .footer-content {
-    padding: 0 0.5rem; /* Tighter padding for the content */
+    padding: 0 0.5rem; /* Tighter content padding */
   }
 
   .footer-links {
-    gap: 1rem; /* Adjust link spacing for tighter layout */
+    gap: 0.8rem; /* Reduce link spacing */
   }
 
   .footer-links a {
-    font-size: 0.95rem; /* Slightly smaller font size to fit in smaller space */
+    font-size: 0.8rem; /* Smaller link font size */
   }
 }
